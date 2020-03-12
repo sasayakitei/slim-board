@@ -6,12 +6,18 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
+    "uikit": "^3.3.3",
     "vue": "^2.6.11",
     "vue-loader": "^15.9.0",
     "vue-template-compiler": "^2.6.11"
   },
   "version": "0.1.0",
   "devDependencies": {
+    "webpack": "^4.42.0",
     "webpack-dev-server": "^3.10.3"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/sasayakitei/slim-board.git",
+  "author": "sasayakitei (Kotaro Nanjo) <bluepostoffice@gmail.com>",
+  "license": "MIT"
 }
