@@ -172,6 +172,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redcarpet (3.5.0)
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -250,6 +251,7 @@ DEPENDENCIES
   annotate
   bootsnap (>= 1.4.2)
   byebug
+  coderay
   devise
   factory_bot_rails
   faker
@@ -262,6 +264,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.1)
+  redcarpet
   rspec-rails
   sass-rails (>= 6)
   slim-rails
