@@ -1,0 +1,38 @@
+header
+  nav.uk-navbar-container.uk-margin uk-navbar=''
+    .uk-navbar-left
+      .uk-navbar-item
+        = link_to 'milog', root_path, class: 'uk-logo manifesto'
+      .uk-navbar-item
+        form.uk-search.uk-search-default.uk-width-large
+          span uk-search-icon=''
+          input.uk-search-input placeholder="Search" type="Search"
+    .uk-navbar-right
+      .uk-navbar-item
+        - if user_signed_in?
+          = current_user.email
+        - else
+          | Guest
+      .uk-navbar-item
+        a uk-icon='menu' href='#'
+        div uk-dropdown=''
+          ul.uk-nav.uk-dropdown-nav.uk-nav-parent-icon
+            li.uk-active
+              a href="#"  Active
+            li
+              a href="#"  Item
+            li.uk-nav-header Header
+            li
+              a href="#"  Item
+            li
+              a href="#"  Item
+            li.uk-nav-divider
+            li
+              = link_to destroy_user_session_path, method: :delete do
+                span class='uk-margin-small-right' uk-icon='icon: sign-out'
+                | logout
+      .uk-navbar-item
+        - if user_signed_in?
+          = link_to 'new', new_article_path, class: 'uk-button uk-button-primary manifesto'
+        - else
+          = link_to 'log in', new_user_session_path, class: 'uk-button uk-button-primary manifesto'

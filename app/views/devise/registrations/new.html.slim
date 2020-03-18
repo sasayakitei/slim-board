@@ -1,0 +1,21 @@
+- provide :title, 'sign up'
+
+.uk-container.uk-container-small.uk-position-center.uk-text-center
+  h1.uk-heading-small.manifesto sign up
+  = form_for resource, as: resource_name, url: registration_path(resource_name), html: {class: 'uk-form-stacked'} do |f|
+    = render "devise/shared/error_messages", resource: resource
+    .uk-margin
+      .uk-inline
+        span.uk-form-icon uk-icon='mail'
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'email', class: 'uk-input uk-width-medium'
+    .uk-margin-small
+      .uk-inline
+        span.uk-form-icon uk-icon='lock'
+        = f.password_field :password, autocomplete: "new-password", placeholder: 'password', class: 'uk-input uk-width-medium'
+    .uk-margin-small
+      .uk-inline
+        span.uk-form-icon uk-icon='check'
+        = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'password confirmation', class: 'uk-input uk-width-medium'
+    .uk-margin
+      = f.submit "create account", class: 'uk-button uk-button-primary manifesto'
+  = render "devise/shared/links"

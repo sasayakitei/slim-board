@@ -1,0 +1,13 @@
+- provide :title, 'new log'
+
+.uk-container.uk-container-small
+  h1.uk-heading-small.manifesto new log
+  = form_with model: @article, local: true, class: 'uk-grid-small', html: {'uk-grid' => ''} do |f|
+    div class='uk-width-1-4@s'
+      = f.collection_select :category_id, @category, :id, :name, {prompt: 'Category'}, {class: 'uk-select'}
+    div class='uk-width-3-4@s'
+      = f.text_field :title, placeholder: 'Title', class: 'uk-input'
+    div class='uk-width-1-1@s'
+      = f.text_area :content, placeholder: 'Content', class: 'uk-textarea uk-height-medium'
+    div class='uk-width-1-1@s'
+      = f.submit 'post', class: 'uk-button uk-button-primary manifesto'

@@ -1,9 +1,9 @@
 - provide :title, 'Home'
 
-.uk-container.uk-container-large
-  #filter-menu
-    a.uk-button.uk-button-primary.uk-button-small href="#offcanvas-slide" uk-toggle="" uk-icon='cog' uk-tooltip="title: filter; pos: top-left"
-    #offcanvas-slide uk-offcanvas="" 
+ul#filter-menu.uk-subnav.uk-subnav-pill uk-margin=''
+  li.uk-active
+    a href="#offcanvas-slide" uk-toggle="" uk-icon='cog' uk-tooltip="title: Filter; pos: top-left"
+    #offcanvas-slide uk-offcanvas="overlay: true" 
       .uk-offcanvas-bar
         ul.uk-nav.uk-nav-default
           li.uk-active
@@ -18,13 +18,14 @@
           li.uk-nav-divider
           li
             a href="#"  Item
-  #main-content
-    .uk-card.uk-card-default.uk-grid-collapse.uk-margin.uk-width-1-2 class="uk-child-width-1-2@s" uk-grid="" 
-      .uk-card-media-left.uk-cover-container
-        img alt="" src="images/light.jpg" uk-cover=""
-        canvas height="400" width="600" 
-      div
-        .uk-card-body
-          h3.uk-card-title Media Left
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+
+#main-content.uk-container.uk-container-small
+  .uk-card.uk-card-default.uk-grid-collapse.uk-margin.uk-width-1-2 class="uk-child-width-1-2@s" uk-grid="" 
+    .uk-card-media-left.uk-cover-container
+      img alt="" src="images/light.jpg" uk-cover=""
+      canvas height="400" width="600" 
+    div
+      .uk-card-body
+        h3.uk-card-title Media Left
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
 
