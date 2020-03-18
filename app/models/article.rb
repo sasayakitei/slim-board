@@ -23,4 +23,7 @@
 class Article < ApplicationRecord
   belongs_to :users
   belongs_to :categories
+  has_one :article_relation, dependent: :destroy
+  has_one :parent_article, through: :article_relations, source: :article
+  has_many :votes, dependent: :destroy
 end
